@@ -1,0 +1,65 @@
+Relational Databases:
+
+Organize data into tables with rows and columns.
+Use structured query language (SQL) for data manipulation and retrieval.
+Ensure data integrity through ACID (Atomicity, Consistency, Isolation, Durability) properties.
+Relationships between data entities are defined through keys.
+Schema is predefined and typically follows a fixed structure.
+Suitable for applications with well-defined data models and relationships, such as transactional systems.
+Non-relational Databases (NoSQL):
+
+Data is stored in various formats, such as key-value pairs, documents, graphs, or wide-column stores.
+Lack a fixed schema, providing flexibility to handle unstructured or semi-structured data.
+Designed for scalability and high performance, especially in distributed environments.
+Support for eventual consistency rather than strong consistency.
+Can handle large volumes of data with ease, making them suitable for big data applications.
+Ideal for scenarios where data models may evolve rapidly or where high scalability and flexibility are required, such as web applications, real-time analytics, and IoT (Internet of Things) platforms.
+
+Database Use Cases
+The database's structure needs to match its intended purpose. Business requirements impact the design of individual tables and how they are interconnected. Transactional and reporting systems need different implementation approaches to serve the people who use them efficiently. Databases tend to support two major categories of data processing: Online Transactional Processing (OLTP) and Online Analytical Processing (OLAP).
+Online Transactional Processing
+OLTP systems handle the transactions we encounter every day. Example transactions include booking a flight reservation, ordering something online, or executing a stock trade. While the number of transactions a system handles on a given day can be very high, individual transactions process small amounts of data. OLTP systems balance the ability to write and read data efficiently.
+Normalization.
+Normalization is a process for structuring a database in a way that minimizes duplication of data.
+
+Entity Relationship Diagram - is a visual artifact of the data modeling process. It shows the the connection between the related entities.
+A unary relationship - is when an entity has a connection with itself.
+A binary relationship connects two entities.
+A ternary relationship connects three entities.
+
+Schema Concepts
+A data warehouse is a database that aggregates data from many transactional systems for analytical purposes.
+A data mart is a subset of a data warehouse. Data warehouses serve the entire organization, whereas data marts focus on the needs of a particular department within the organization.
+A data lake stores raw data in its native format instead of conforming to a relational database structure. Using a data lake is more complex than a data warehouse or data mart, as it requires additional knowledge about the raw data to make it analytically useful.
+
+Dimensionality
+
+Dimensionality refers to the number of attributes a table has. The greater the number of attributes, the higher the dimensionality.
+There are multiple ways to design dimensions. Table 3.5 illustrates the start and end date approach.
+
+Extract:  In the first phase, you extract data from the source system and place it in a staging area. The goal of the extract phase is to move data from a relational database into a flat file as quickly as possible.
+Transform:  The second phase transforms the data. The goal is to reformat the data from its transactional structure to the data warehouse's analytical design.
+Load:  The purpose of the load phase is to ensure data gets into the analytical system as quickly as possible.
+
+Data Acquisition Methods
+1. An application programming interface (API) is a structured method for computer systems to exchange information.
+2. Web Services - A web service is an API you can call via Hypertext Transfer Protocol (HTTP), the language of the World Wide Web.
+3. Web Scraping - one of the data you want may not be available internally as an API or publicly via a web service. However, data may exist on a website. If data exists in a structured format, you can retrieve it programmatically. Programmatic retrieval of data from a website is known as web scraping.
+4. Human-In-The-Loop - Basically understanding the data from humans and how they feel about the services you provide to them.
+5. Surveys - One way to collect data directly from your customers is by conducting a survey.
+6. Survey Tools - Instead of designing a custom application to collect survey data, several survey products let you design complex surveys without worrying about building a database. Qualtrics is a powerful tool for developing and administering surveys.
+7. Observation - is the act of collecting primary source data, from either people or machines. Observational data can be qualitative or quantitative.
+8. Sampling - Suppose you want to analyse one day's worth of data. In that case, the 800 billion records represent the total population, or the number of events, available. Since manipulating 800 billion records is unwieldy, you might collect a sample, or subset, of the overall population.
+
+Data Manipulation
+The acronym CRUD (Create, Read, Update, Delete) is a handy way to remember these four operations.
+Create - ##INSERT-Creates new data in an existing table
+
+Read - ##SELECT-Retrieves data from an existing table
+
+Update - ##UPDATE-Changes existing data in an existing table
+
+Delete - ##DELETE-Removes existing data from an existing table
+
+Duplicate Data
+Duplicate data occurs when data representing the same transaction is accidentally duplicated within a system.
